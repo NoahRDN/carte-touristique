@@ -1,3 +1,11 @@
+\c mabase
+DROP DATABASE cartetouristique;
+
+CREATE DATABASE cartetouristique;
+\c cartetouristique 
+
+CREATE EXTENSION postgis;
+
 CREATE TABLE lieux (
   id SERIAL PRIMARY KEY,
   nom TEXT NOT NULL,
@@ -21,3 +29,4 @@ CREATE TABLE villes (
   nom TEXT,
   pays_code TEXT REFERENCES pays(code)
 );
+
